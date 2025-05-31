@@ -1,15 +1,14 @@
-const images = document.querySelectorAll('.gallery-image');
-const overlay = document.getElementById('overlay');
-const overlayImage = document.getElementById('overlayImage');
-const closeBtn = document.getElementById('closeBtn');
+const popup = document.getElementById("popup");
+const popupImg = document.getElementById("popup-img");
+const closeBtn = document.getElementById("close");
 
-images.forEach(img => {
-  img.addEventListener('click', () => {
-    overlay.style.display = 'flex';
-    overlayImage.src = img.src;
+document.querySelectorAll(".thumbnail").forEach(img => {
+  img.addEventListener("click", () => {
+    popupImg.src = img.src;
+    popup.style.display = "flex";
   });
 });
 
-closeBtn.addEventListener('click', () => {
-  overlay.style.display = 'none';
+closeBtn.addEventListener("click", () => {
+  popup.style.display = "none";
 });
