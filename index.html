@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Photo Gallery</title>
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -11,20 +11,20 @@
     <h1>My Photo Gallery</h1>
   </header>
 
-  <section class="gallery">
+  <main class="gallery">
     <img src="image1.jpg" alt="Gallery Image 1" />
     <img src="image2.jpg" alt="Gallery Image 2" />
     <img src="image3.jpg" alt="Gallery Image 3" />
-  </section>
+  </main>
 
   <section class="feedback-form">
     <h2>Feedback Form</h2>
     <form>
       <label for="name">Name:</label>
-      <input type="text" id="name" required />
+      <input type="text" id="name" name="name" />
 
       <label for="message">Message:</label>
-      <textarea id="message" required></textarea>
+      <textarea id="message" name="message"></textarea>
 
       <button type="submit">Submit</button>
     </form>
