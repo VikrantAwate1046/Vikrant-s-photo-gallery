@@ -1,1 +1,4 @@
-console.log("Gallery and feedback form loaded.");
+document.querySelector("form").addEventListener("submit", function (e) {
+  e.preventDefault();
+  alert("Thank you for your feedback!");
+});
