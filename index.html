@@ -11,12 +11,10 @@
     <h1>My Photo Gallery</h1>
   </header>
 
-  <main>
-    <div class="gallery">
-      <img src="image1.jpg" alt="Image 1" class="gallery-image" />
-      <img src="image2.jpg" alt="Image 2" class="gallery-image" />
-      <img src="image3.jpg" alt="Image 3" class="gallery-image" />
-    </div>
+  <main class="gallery">
+    <img src="image1.jpg" alt="Image 1" class="thumbnail" />
+    <img src="image2.jpg" alt="Image 2" class="thumbnail" />
+    <img src="image3.jpg" alt="Image 3" class="thumbnail" />
   </main>
 
   <section class="feedback">
@@ -36,5 +34,11 @@
     <p>Contact me: <a href="mailto:awate.vikrant820@yahoo.com">awate.vikrant820@yahoo.com</a></p>
   </footer>
 
-  <div id="overlay" class="overlay">
-    <span id="closeBtn" class="close">&times;</span>
+  <div id="popup" class="popup">
+    <span id="close" class="close-btn">&times;</span>
+    <img id="popup-img" src="" alt="Enlarged image">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
