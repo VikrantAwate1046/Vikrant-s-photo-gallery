@@ -1,44 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Photo Gallery</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>My Photo Gallery</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <h1>My Photo Gallery</h1>
-  </header>
+    <header>
+        <h1>My Photo Gallery</h1>
+    </header>
 
-  <main class="gallery">
-    <img src="image1.jpg" alt="Image 1" class="thumbnail" />
-    <img src="image2.jpg" alt="Image 2" class="thumbnail" />
-    <img src="image3.jpg" alt="Image 3" class="thumbnail" />
-  </main>
+    <main class="gallery">
+        <img src="image1.jpg" class="thumbnail" />
+        <img src="image2.jpg" class="thumbnail" />
+        <img src="image3.jpg" class="thumbnail" />
+        </main>
 
-  <section class="feedback">
-    <h2>Feedback Form</h2>
-    <form>
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required />
+    <section class="feedback">
+        <h2>Feedback Form</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
 
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" rows="3" required></textarea>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
 
-      <button type="submit">Submit</button>
-    </form>
-  </section>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
 
-  <footer>
-    <p>Contact me: <a href="mailto:awate.vikrant820@yahoo.com">awate.vikrant820@yahoo.com</a></p>
-  </footer>
+    <footer>
+        <p>Contact me: <a href="mailto:awate.vikrant820@yahoo.com">awate.vikrant820@yahoo.com</a></p>
+    </footer>
 
-  <div id="popup" class="popup">
-    <span id="close" class="close-btn">&times;</span>
-    <img id="popup-img" src="" alt="Enlarged image">
-  </div>
+    <div id="popup" class="popup">
+        <span id="close" class="close-btn">&times;</span>
+        <img id="popup-img" src="" alt="Enlarged image">
+    </div>
 
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
