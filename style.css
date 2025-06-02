@@ -1,112 +1,171 @@
+/* Import the 'Open Sans' font for body text */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  background-color: #f5f5f5;
+    font-family: 'Open Sans', sans-serif; /* Apply the new font */
+    margin: 0;
+    background-color: #f0f4f7; /* A very light, calming blue-grey background */
+    color: #333; /* Softer dark text color */
+    line-height: 1.6; /* Improves readability by giving more space between lines */
 }
 
 header {
-  background-color: #222;
-  color: #fff;
-  text-align: center;
-  padding: 1rem;
+    background-color: #4CAF50; /* A pleasant green header */
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem; /* Slightly more vertical padding */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* A subtle shadow for depth */
+}
+
+header h1 {
+    margin: 0; /* Removes default top/bottom margin from heading */
 }
 
 .gallery {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding: 20px;
-  flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    gap: 25px; /* Space between images */
+    padding: 30px; /* Padding around the gallery area */
+    flex-wrap: wrap; /* Allows images to wrap to the next line on smaller screens */
+    max-width: 1000px; /* Limits the gallery's width on very large screens */
+    margin: 20px auto; /* Centers the gallery horizontally with vertical spacing */
 }
 
 .thumbnail {
-  width: 200px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: transform 0.3s;
+    width: 220px; /* Fixed width for thumbnails */
+    height: 165px; /* Fixed height, maintaining aspect ratio with object-fit */
+    object-fit: cover; /* Ensures images fill the space without distortion */
+    border-radius: 8px; /* Slightly rounded corners for a softer look */
+    cursor: pointer; /* Changes mouse cursor to a pointer, indicating it's clickable */
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out; /* Smooth hover effect */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Adds a soft shadow for depth */
 }
 
 .thumbnail:hover {
-  transform: scale(1.05);
+    transform: scale(1.07); /* Enlarges image slightly on hover */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15); /* Slightly darker shadow on hover */
 }
 
 .feedback {
-  max-width: 600px;
-  margin: 20px auto;
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    max-width: 550px; /* Maximum width for the feedback form */
+    margin: 40px auto; /* Centers the form horizontally with vertical spacing */
+    background: #ffffff; /* White background for the form */
+    padding: 30px; /* Space inside the form container */
+    border-radius: 10px; /* Rounded corners for the form */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Soft shadow for the form */
 }
 
 .feedback h2 {
-  margin-bottom: 10px;
+    margin-bottom: 20px; /* Space below the form heading */
+    color: #4CAF50; /* Matches header color */
+    text-align: center;
 }
 
 .feedback label {
-  display: block;
-  margin-top: 10px;
+    display: block; /* Makes labels appear on their own line */
+    margin-top: 15px; /* Space above each label */
+    margin-bottom: 5px; /* Space below each label */
+    font-weight: 600; /* Makes labels slightly bolder */
+    color: #555;
 }
 
 .feedback input,
 .feedback textarea {
-  width: 100%;
-  padding: 8px;
-  margin-top: 5px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+    width: calc(100% - 20px); /* Makes input fields fill almost full width, accounting for padding */
+    padding: 10px; /* Padding inside input fields */
+    margin-top: 5px;
+    border: 1px solid #ccc; /* Light grey border for inputs */
+    border-radius: 5px; /* Rounded corners for inputs */
+    font-size: 1rem;
+    box-sizing: border-box; /* Ensures padding is included in the element's total width */
+}
+
+.feedback input:focus,
+.feedback textarea:focus {
+    border-color: #4CAF50; /* Green border when input is focused */
+    outline: none; /* Removes the default browser outline */
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.3); /* Gentle green glow on focus */
+}
+
+.feedback textarea {
+    resize: vertical; /* Allows users to resize textarea vertically */
 }
 
 .feedback button {
-  margin-top: 15px;
-  padding: 10px;
-  width: 100%;
-  background-color: #222;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+    margin-top: 20px; /* Space above the button */
+    padding: 12px; /* Padding inside the button */
+    width: 100%;
+    background-color: #4CAF50; /* Green button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease; /* Smooth color change on hover */
 }
 
 .feedback button:hover {
-  background-color: #444;
+    background-color: #66BB6A; /* Lighter green on hover */
 }
 
 footer {
-  text-align: center;
-  padding: 15px;
-  background-color: #eee;
+    text-align: center;
+    padding: 20px;
+    background-color: #e0e6eb; /* Light grey-blue footer background */
+    color: #777; /* Softer text color for footer */
+    margin-top: 60px; /* Space above the footer */
+    font-size: 0.9rem;
 }
 
-/* Popup styles */
+footer a {
+    color: #4CAF50; /* Green link color */
+    text-decoration: none; /* Removes underline by default */
+    font-weight: 600;
+}
+
+footer a:hover {
+    text-decoration: underline; /* Adds underline on hover */
+}
+
+/* Popup styles (for the enlarged image) */
 .popup {
-  position: fixed;
-  display: none;
-  justify-content: center;
-  align-items: center;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  backdrop-filter: blur(8px);
-  background: rgba(0, 0, 0, 0.8);
-  z-index: 999;
+    position: fixed; /* Stays in place when scrolling */
+    display: none; /* Hidden by default, shown by JavaScript */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(8px); /* Blurs the background content */
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent dark overlay */
+    z-index: 999; /* Ensures the popup is on top of other content */
+    opacity: 0; /* Start fully transparent for a fade-in effect */
+    transition: opacity 0.3s ease; /* Smooth fade-in/out transition */
+}
+
+.popup.active { /* This class is added by JS to trigger the fade-in */
+    opacity: 1;
 }
 
 .popup img {
-  max-width: 90%;
-  max-height: 80%;
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(255,255,255,0.4);
+    max-width: 90%; /* Limits enlarged image width */
+    max-height: 80%; /* Limits enlarged image height */
+    border-radius: 10px; /* Rounded corners for the enlarged image */
+    box-shadow: 0 0 20px rgba(255,255,255,0.4); /* Gentle white glow around the image */
+    object-fit: contain; /* Ensures the whole image is visible within its max dimensions */
 }
 
 .close-btn {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  font-size: 40px;
-  color: white;
-  cursor: pointer;
+    position: absolute; /* Positions relative to the popup */
+    top: 20px;
+    right: 30px;
+    font-size: 40px; /* Large 'X' icon */
+    color: white; /* White color for the 'X' */
+    cursor: pointer;
+    transition: color 0.2s; /* Smooth color change on hover */
+}
+
+.close-btn:hover {
+    color: #ff6f61; /* Soft red on hover for the close button */
 }
